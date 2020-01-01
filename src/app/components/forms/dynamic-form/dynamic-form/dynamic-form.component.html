@@ -1,0 +1,9 @@
+<!-- {{ dynamicForm | json}} -->
+<form [formGroup]="dynamicForm">
+  <ng-container *ngFor="let item of keys(dynamicForm.controls)">
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" class="form-control" id="email">
+    </div>
+  </ng-container>
+</form>
